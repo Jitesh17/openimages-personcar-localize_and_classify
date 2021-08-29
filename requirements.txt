@@ -1,0 +1,10 @@
+numpy~=1.19.1
+opencv-python~=4.4.0.42
+Cython~=0.29.21
+torch~=1.6.0
+tensorboard~=2.3.0
+torchvision~=0.7.0
+matplotlib~=3.3.1
+tabulate~=0.8.7
+pycocotools~=2.0.1
+-e git+https://github.com/facebookresearch/detectron2.git@82a57ce0b70057685962b352535147d9a8118578#egg=detectron2

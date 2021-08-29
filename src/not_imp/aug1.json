@@ -1,0 +1,68 @@
+{
+    "__version__": "1.0.3",
+    "transform": {
+        "__class_fullname__": "Compose",
+        "p": 1.0,
+        "transforms": [
+            {
+                "__class_fullname__": "OneOf",
+                "p": 0.5,
+                "transforms": [
+                    {
+                        "__class_fullname__": "HorizontalFlip",
+                        "always_apply": false,
+                        "p": 1.0
+                    }
+                ]
+            },
+            {
+                "__class_fullname__": "OneOf",
+                "p": 0.5,
+                "transforms": [
+                    {
+                        "__class_fullname__": "RGBShift",
+                        "always_apply": false,
+                        "p": 1.0,
+                        "r_shift_limit": [
+                            -15,
+                            15
+                        ],
+                        "g_shift_limit": [
+                            -15,
+                            15
+                        ],
+                        "b_shift_limit": [
+                            -15,
+                            15
+                        ]
+                    },
+                    {
+                        "__class_fullname__": "RandomBrightnessContrast",
+                        "always_apply": false,
+                        "p": 1.0,
+                        "brightness_limit": [
+                            -0.2,
+                            0.2
+                        ],
+                        "contrast_limit": [
+                            -0.2,
+                            0.2
+                        ],
+                        "brightness_by_max": true
+                    }
+                ]
+            }
+        ],
+        "bbox_params": {
+            "format": "coco",
+            "label_fields": [
+                "class_labels"
+            ],
+            "min_area": 4,
+            "min_visibility": 0.1,
+            "check_each_transform": true
+        },
+        "keypoint_params": null,
+        "additional_targets": {}
+    }
+}
